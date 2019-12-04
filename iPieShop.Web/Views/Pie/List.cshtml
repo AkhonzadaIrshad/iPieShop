@@ -1,0 +1,28 @@
+﻿@model PieListViewModel
+<h3>@Model.SelectedCategory</h3>
+<br />
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pie in Model.Pies)
+        {
+            <tr>
+                <td>@pie.Id</td>
+                <td>
+                    <a asp-controller="Pie" asp-action="Detail" asp-route-id="@pie.Id">
+                        @pie.Name
+                    </a>
+                </td>
+                <td>@pie.Price</td>
+                <td>@pie.ImageUrl</td>
+            </tr>
+        }
+    </tbody>
+</table>

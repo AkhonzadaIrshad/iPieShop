@@ -1,0 +1,23 @@
+﻿@model Pie
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Id</td>
+            <td>@Model.Name</td>
+            <td>@Model.CategoryId</td>
+            <td>@Model.Description</td>
+            <td>@Model.Price</td>
+            <td>@Model.ImageUrl</td>
+        </tr>
+    </tbody>
+</table>
